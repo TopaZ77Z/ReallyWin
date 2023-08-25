@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{27e12315-bfa0-42a9-9945-2c89fdec54c9}</ProjectGuid>
+    <RootNamespace>ArcticTech</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IntDir>.\.vs</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IntDir>.\.vs\</IntDir>
+    <OutDir>..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;ARCTICTECH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;ARCTICTECH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ARCTICTECH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ARCTICTECH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Features\Misc\Logs.cpp" />
+    <ClCompile Include="Features\RageBot\Interpolate.cpp" />
+    <ClCompile Include="Features\RageBot\LocalAnimationSystem.cpp" />
+    <ClCompile Include="Features\RageBot\SetupBones.cpp" />
+    <ClCompile Include="Lua\Lua.cpp" />
+    <ClCompile Include="SDK\Config.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Features\AntiAim\AntiAim.cpp" />
+    <ClCompile Include="Features\Misc\AutoPeek.cpp" />
+    <ClCompile Include="Features\Misc\AutoStrafe.cpp" />
+    <ClCompile Include="Features\Misc\EventListner.cpp" />
+    <ClCompile Include="Features\Misc\Misc.cpp" />
+    <ClCompile Include="Features\Misc\Prediction.cpp" />
+    <ClCompile Include="Features\Misc\UI.cpp" />
+    <ClCompile Include="Features\RageBot\AnimationSystem.cpp" />
+    <ClCompile Include="Features\RageBot\AutoWall.cpp" />
+    <ClCompile Include="Features\RageBot\DoubleTap.cpp" />
+    <ClCompile Include="Features\RageBot\LagCompensation.cpp" />
+    <ClCompile Include="Features\RageBot\Ragebot.cpp" />
+    <ClCompile Include="Features\RageBot\Resolver.cpp" />
+    <ClCompile Include="Features\ShotManager\ShotManager.cpp" />
+    <ClCompile Include="Features\Visuals\Chams.cpp" />
+    <ClCompile Include="Features\Visuals\ESP.cpp" />
+    <ClCompile Include="Features\Visuals\Glow.cpp" />
+    <ClCompile Include="Features\Visuals\GrenadePrediction.cpp" />
+    <ClCompile Include="Features\Visuals\World.cpp" />
+    <ClCompile Include="SDK\Hooks.cpp" />
+    <ClCompile Include="Menu\menu.cpp" />
+    <ClCompile Include="Menu\menu_backend.cpp" />
+    <ClCompile Include="Menu\menu_elements.cpp" />
+    <ClCompile Include="SDK\Interfaces\IClientEntityList.cpp" />
+    <ClCompile Include="SDK\Interfaces\IEffects.cpp" />
+    <ClCompile Include="SDK\Interfaces\IEngineTrace.cpp" />
+    <ClCompile Include="SDK\Memory.cpp" />
+    <ClCompile Include="SDK\Interfaces.cpp" />
+    <ClCompile Include="SDK\Misc\CBaseCombatWeapon.cpp" />
+    <ClCompile Include="SDK\Misc\CBaseEntity.cpp" />
+    <ClCompile Include="SDK\Misc\CBasePlayer.cpp" />
+    <ClCompile Include="SDK\Misc\checksum_crc.cpp" />
+    <ClCompile Include="SDK\Misc\UtlReference.h" />
+    <ClCompile Include="SDK\Misc\Vector.cpp" />
+    <ClCompile Include="Utils\Animation.cpp" />
+    <ClCompile Include="Utils\Console.cpp" />
+    <ClCompile Include="SDK\Globals.cpp" />
+    <ClCompile Include="Utils\Math.cpp" />
+    <ClCompile Include="Utils\NetVars.cpp" />
+    <ClCompile Include="SDK\Render.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+    <ClCompile Include="Utils\VMTHook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Features\Misc\Logs.h" />
+    <ClInclude Include="Features\RageBot\Interpolate.h" />
+    <ClInclude Include="Features\RageBot\LocalAnimationSystem.h" />
+    <ClInclude Include="Features\RageBot\SetupBones.h" />
+    <ClInclude Include="Lua\Lua.h" />
+    <ClInclude Include="SDK\Config.h" />
+    <ClInclude Include="detours.h" />
+    <ClInclude Include="Features\AntiAim\AntiAim.h" />
+    <ClInclude Include="Features\Misc\AutoPeek.h" />
+    <ClInclude Include="Features\Misc\AutoStrafe.h" />
+    <ClInclude Include="Features\Misc\EventListner.h" />
+    <ClInclude Include="Features\Misc\Misc.h" />
+    <ClInclude Include="Features\Misc\Prediction.h" />
+    <ClInclude Include="Features\Misc\UI.h" />
+    <ClInclude Include="Features\RageBot\AnimationSystem.h" />
+    <ClInclude Include="Features\RageBot\AutoWall.h" />
+    <ClInclude Include="Features\RageBot\DoubleTap.h" />
+    <ClInclude Include="Features\RageBot\LagCompensation.h" />
+    <ClInclude Include="Features\RageBot\Ragebot.h" />
+    <ClInclude Include="Features\RageBot\Resolver.h" />
+    <ClInclude Include="Features\ShotManager\ShotManager.h" />
+    <ClInclude Include="Features\Visuals\Chams.h" />
+    <ClInclude Include="Features\Visuals\ESP.h" />
+    <ClInclude Include="Features\Visuals\Glow.h" />
+    <ClInclude Include="Features\Visuals\GrenadePrediction.h" />
+    <ClInclude Include="Features\Visuals\World.h" />
+    <ClInclude Include="SDK\Hooks.h" />
+    <ClInclude Include="Menu\menu.h" />
+    <ClInclude Include="Menu\menu_elements.h" />
+    <ClInclude Include="Resources\aim-img.h" />
+    <ClInclude Include="Resources\antiaim-img.h" />
+    <ClInclude Include="Resources\background.h" />
+    <ClInclude Include="Resources\config-img.h" />
+    <ClInclude Include="Resources\Fonts.h" />
+    <ClInclude Include="Resources\hegrenade.h" />
+    <ClInclude Include="Resources\inferno.h" />
+    <ClInclude Include="Resources\lua-img.h" />
+    <ClInclude Include="Resources\misc-img.h" />
+    <ClInclude Include="Resources\molotov.h" />
+    <ClInclude Include="Resources\playerlist-img.h" />
+    <ClInclude Include="Resources\skinchanger-img.h" />
+    <ClInclude Include="Resources\visuals-img.h" />
+    <ClInclude Include="SDK\Interfaces\IEffects.h" />
+    <ClInclude Include="SDK\Interfaces\NetworkStringTable.h" />
+    <ClInclude Include="SDK\Interfaces.h" />
+    <ClInclude Include="SDK\Interfaces\CCSPlayerResource.h" />
+    <ClInclude Include="SDK\Interfaces\CGlobalVarsBase.h" />
+    <ClInclude Include="SDK\Interfaces\CGlowObjectManager.h" />
+    <ClInclude Include="SDK\Interfaces\CInput.h" />
+    <ClInclude Include="SDK\Interfaces\IAppSystem.h" />
+    <ClInclude Include="SDK\Interfaces\IBaseClientDLL.h" />
+    <ClInclude Include="SDK\Interfaces\IClientEntityList.h" />
+    <ClInclude Include="SDK\Interfaces\IClientMode.h" />
+    <ClInclude Include="SDK\Interfaces\IConVar.h" />
+    <ClInclude Include="SDK\Interfaces\ICvar.h" />
+    <ClInclude Include="SDK\Interfaces\IEngineSound.h" />
+    <ClInclude Include="SDK\Interfaces\IEngineTrace.h" />
+    <ClInclude Include="SDK\Interfaces\IGameEvents.h" />
+    <ClInclude Include="SDK\Interfaces\IInputSystem.h" />
+    <ClInclude Include="SDK\Interfaces\IKeyValuesSystem.h" />
+    <ClInclude Include="SDK\Interfaces\ILocalize.h" />
+    <ClInclude Include="SDK\Interfaces\IMaterialSystem.h" />
+    <ClInclude Include="SDK\Interfaces\IPanel.h" />
+    <ClInclude Include="SDK\Interfaces\IPhysicsSurface.h" />
+    <ClInclude Include="SDK\Interfaces\IPrediction.h" />
+    <ClInclude Include="SDK\Interfaces\ISurface.h" />
+    <ClInclude Include="SDK\Interfaces\IVDebugOverlay.h" />
+    <ClInclude Include="SDK\Interfaces\IVEngineClient.h" />
+    <ClInclude Include="SDK\Memory.h" />
+    <ClInclude Include="SDK\Misc\CBaseCombatWeapon.h" />
+    <ClInclude Include="SDK\Misc\CBaseEntity.h" />
+    <ClInclude Include="SDK\Misc\CBasePlayer.h" />
+    <ClInclude Include="SDK\Misc\checksum_crc.h" />
+    <ClInclude Include="SDK\Misc\Color.h" />
+    <ClInclude Include="SDK\Misc\CUserCmd.h" />
+    <ClInclude Include="SDK\Misc\Matrix.h" />
+    <ClInclude Include="SDK\Misc\platform.h" />
+    <ClInclude Include="SDK\Misc\QAngle.h" />
+    <ClInclude Include="SDK\Misc\Studio.h" />
+    <ClInclude Include="SDK\Misc\UtlMemory.h" />
+    <ClInclude Include="SDK\Misc\UtlVector.h" />
+    <ClInclude Include="SDK\Misc\Vector.h" />
+    <ClInclude Include="SDK\Interfaces\ViewRenderBeams.h" />
+    <ClInclude Include="Utils\Animation.h" />
+    <ClInclude Include="Utils\Console.h" />
+    <ClInclude Include="SDK\Globals.h" />
+    <ClInclude Include="Utils\Hash.h" />
+    <ClInclude Include="Utils\json.hpp" />
+    <ClInclude Include="Utils\Math.h" />
+    <ClInclude Include="Utils\NetVars.h" />
+    <ClInclude Include="Utils\pe32.h" />
+    <ClInclude Include="SDK\Render.h" />
+    <ClInclude Include="Utils\Utils.h" />
+    <ClInclude Include="Utils\VitualFunction.h" />
+    <ClInclude Include="Utils\VMTHook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="detours.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

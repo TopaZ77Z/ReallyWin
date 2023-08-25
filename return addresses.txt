@@ -1,0 +1,3 @@
+IDirect3DDevice9::EndScene      shaderapidx9.dll        31383
+IDirect3DDevice9::Present       shaderapidx9.dll        31537
+IDirect3DDevice9::EndScene      gameoverlayrenderer.dll 66BDF
